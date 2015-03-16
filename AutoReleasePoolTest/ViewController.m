@@ -13,7 +13,7 @@
 
 #define DISPATCH_ON_MAIN_THREAD(mainQueueBlock) dispatch_async(dispatch_get_main_queue(), (mainQueueBlock));
 
-static const int kStep = 10;
+static const int kStep = 10000;
 static const int kIterationCount = 50 * kStep;
 
 @interface ViewController ()
@@ -59,7 +59,7 @@ static const int kIterationCount = 50 * kStep;
                 [NSString stringWithFormat:@"%@%@", num, str];
                 
                 if (i % kStep == 0) {
-                    [_memoryUsageList1 addObject:@(i)];
+                    [_memoryUsageList1 addObject:@(report_memory())];
                 }
             }
         }
@@ -75,7 +75,7 @@ static const int kIterationCount = 50 * kStep;
             [NSString stringWithFormat:@"%@%@", num, str];
             
             if (i % kStep == 0) {
-                [_memoryUsageList2 addObject:@(i)];
+                [_memoryUsageList2 addObject:@(report_memory())];
             }
         }
     });
