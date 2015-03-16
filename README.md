@@ -6,4 +6,4 @@ An example to figure out the benefit to use @autoreleasepool in ARC iOS program
 
 like this:
 
-![image](http://zorrochen.qiniudn.com/blog_what_is_autoreleasepool_1.png)
+![image](http://zorrochen.qiniudn.com/blog_what_is_autoreleasepool_1.png?imageView2/0/h/400)
